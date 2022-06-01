@@ -75,13 +75,13 @@ for i in range(10):
     #Append the pigeon to a list of pigeons
     pigeons.append(pigeon)
     
-    
+
 def walkAvatars():
-    walk1 = vizact.walkTo([4.5, 0,-40])
-    vizact.ontimer2(0.5,0,female.addAction,walk1)
+    walk1 = vizact.walkTo([4.5, 0,-40])  # Walk from one position to another position 
+    vizact.ontimer2(0.5,0,female.addAction,walk1) # Apllying on fmale 
 
     walk2 = vizact.walkTo([3.5,0,-40])
-    male.addAction(walk2)
+    male.addAction(walk2) # Apllying walk2 on male 
 
 def pigeonsFeed():
 
@@ -94,4 +94,5 @@ def pigeonsFeed():
     for pigeon in pigeons:
         pigeon.addAction(pigeon_idle)
 
-vizact.onkeydown('p',pigeonsFeed)
+vizact.onkeydown('p',pigeonsFeed) # On the press of key P the pigeonsFeed function is called
+vizact.onkeydown('m',walkAvatars) # On the press of key w the walkAvatars function is called 
