@@ -78,13 +78,12 @@ for i in range(10):
 
 def walkAvatars():
     walk1 = vizact.walkTo([4.5, 0,-40])  # Walk from one position to another position 
-    vizact.ontimer2(0.5,0,female.addAction,walk1) # Apllying on fmale 
+    vizact.ontimer2(0.5,0,female.addAction,walk1) # Apllying on female 
 
     walk2 = vizact.walkTo([3.5,0,-40])
     male.addAction(walk2) # Apllying walk2 on male 
 
 def pigeonsFeed():
-
     random_speed = vizact.method.setAnimationSpeed(0,vizact.randfloat(0.7,1.5))
     random_walk = vizact.walkTo(pos=[vizact.randfloat(-4,4),0,vizact.randfloat(3,7)])
     random_animation = vizact.method.state(vizact.choice([1,3],vizact.RANDOM))
@@ -95,4 +94,4 @@ def pigeonsFeed():
         pigeon.addAction(pigeon_idle)
 
 vizact.onkeydown('p',pigeonsFeed) # On the press of key P the pigeonsFeed function is called
-vizact.onkeydown('m',walkAvatars) # On the press of key w the walkAvatars function is called 
+vizact.onkeydown('w',walkAvatars) # On the press of key w the walkAvatars function is called 
